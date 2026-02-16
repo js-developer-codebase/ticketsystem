@@ -31,7 +31,7 @@ A modern, full-stack support ticket management system built with Next.js 15, Typ
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/js-developer-codebase/ticketsystem.git
    cd ticket-system
    ```
 
@@ -63,7 +63,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `src/services`: Business logic layer.
 - `src/repositories`: Data access layer.
 - `src/middleware`: Authentication and authorization logic.
-
-## License
-
-This project is private and for internal use.
