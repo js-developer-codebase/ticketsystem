@@ -15,14 +15,17 @@ export default function Navbar() {
         <nav className="border-b bg-white">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <Link href="/tickets" className="text-xl font-bold text-blue-600">
-                    TicketSystem
+                    Ticket System
                 </Link>
 
                 <div className="flex items-center gap-4">
                     {user ? (
                         <>
-                            <span className="text-sm text-slate-600">
+                            <span className="text-sm text-slate-600 hidden md:inline">
                                 Hello, <span className="font-semibold">{user.name}</span> ({user.role})
+                            </span>
+                            <span className="text-sm text-slate-600 md:hidden">
+                                <span className="font-semibold">{user.name}</span>
                             </span>
                             <Button variant="outline" size="sm" onClick={logout}>
                                 Logout

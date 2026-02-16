@@ -308,11 +308,12 @@ export default function TicketDetailsPage() {
                             <p className="text-sm text-slate-500">Leave empty if not assigned yet</p>
                             {editForm.formState.errors.assignee && <p className="text-sm text-red-500">{editForm.formState.errors.assignee.message}</p>}
                         </div>
-                        <DialogFooter className="pt-4 justify-start">
-                            <Button type="submit" disabled={updateMutation.isPending}>
+                        <DialogFooter className="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-2">
+                            <Button type="submit" disabled={updateMutation.isPending} className="w-full sm:w-auto">
                                 {updateMutation.isPending ? 'Updating...' : 'Update Ticket'}
                             </Button>
-                            <Button type="button" variant="outline" onClick={() => setIsEditModalOpen(false)}>Cancel</Button>
+                            <Button type="button" variant="outline" onClick={() => setIsEditModalOpen(false)} className="w-full sm:w-auto">Cancel</Button>
+                            <div className="h-4 sm:hidden"></div> {/* Extra space for mobile view */}
                         </DialogFooter>
                     </form>
                 </DialogContent>
