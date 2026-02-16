@@ -240,7 +240,7 @@ export default function TicketDetailsPage() {
 
             {/* Edit Modal */}
             <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
-                <DialogContent className="max-w-2xl">
+                <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto pb-8">
                     <DialogHeader>
                         <DialogTitle>Edit Ticket</DialogTitle>
                         <p className="text-sm text-slate-500">Update the ticket details below</p>
